@@ -1,24 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Layout from './components/Layout'
-import Dashboard from './Pages/Dashboard'
-import Bookings from './Pages/Bookings'
-import Invoices from './Pages/Invoices'
-import Tickets from './Pages/Tickets'
+import { useRoutes } from 'react-router-dom'
+import {Router} from './Router/Router';
 function App() {
-
+  const routing = useRoutes(Router)
   return (
     <>
-      <Router>
-        <Layout>
-          <Routes>
-              <Route  path='/' element={<Dashboard /> } />
-              <Route path='/tickets' element={<Tickets /> } />
-              <Route path='/bookings' element={<Bookings /> } />
-              <Route path='invoices' element={<Invoices /> } />
-          </Routes>
-        </Layout>
-      </Router>
+       {routing}
     </>
   )
 }
