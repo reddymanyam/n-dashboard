@@ -1,27 +1,31 @@
-import React from 'react'
-import Navbar from './Navbar'
-import Sidebar from './Sidebar'
+import React from 'react';
+import Navbar from './Navbar';
+import Sidebar from './Sidebar';
 import Box from '@mui/material/Box';
+import { Outlet } from 'react-router-dom';
 
-
-const Layout = ({ children }) => {
+const Layout = () => {
     return (
-        <Box display="flex" >
+        <Box display="flex" flexDirection="column" width="100%" height="100vh">
 
-            <Box width="150px" height="100vh" top="0" left="0" bgcolor="blue" position="fixed" >
-                <Sidebar />
+            <Box width="100%" height="60px" position="fixed" top="0" left="0" bgcolor="lightblue" zIndex={1000}>
+                <Navbar />
             </Box>
-            <Box width="calc(100% - 150px)" marginLeft="150px"   position="relative" >
-                <Box position="fixed" top="0" height="50px" left="150px" width="calc(100% - 150px)" bgcolor="green">
-                    <Navbar />
+
+            <Box display="flex"  width="100%" marginTop="60px">
+                
+                <Box position="fixed" height="calc(100vh - 60px)" width="150px" bgcolor="lightblue" top="60px" left="0">
+                    <Sidebar />
                 </Box>
 
-                <Box padding="20px" marginTop="50px" height="calc(100vh - 50px)" overflow="auto" >
-                    {children}
+                <Box marginLeft="150px" left="150px" width="calc(100% - 150px)" height="calc(100vh - 60px)" overflow="auto" padding="30px" bgcolor="black" color="white">
+                    <Outlet />
                 </Box>
+
             </Box>
         </Box>
-    )
+    );
 }
 
-export default Layout
+export default Layout;
+
