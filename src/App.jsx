@@ -1,6 +1,6 @@
 import './App.css'
 import { useRoutes } from 'react-router-dom'
-import {Router} from './Router/Router';
+import Router from './router/router'
 function App() {
   const routing = useRoutes(Router)
   return (
