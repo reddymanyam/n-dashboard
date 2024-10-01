@@ -14,12 +14,13 @@ import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import { Link } from 'react-router-dom';
 
 const CustomListItemIcon = styled(ListItemIcon)({
- minWidth:"40px"
+  minWidth: "40px",
+  color:"white"
 })
 
 export default function Sidebar() {
   return (
-    <Box  left="0" bgcolor="lightblue" position="fixed" >
+    <Box left="0"  position="fixed" >
       <nav aria-label="main mailbox folders">
         <List>
           <ListItem disablePadding>

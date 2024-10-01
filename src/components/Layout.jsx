@@ -8,17 +8,17 @@ const Layout = () => {
     return (
         <Box display="flex" flexDirection="column" width="100%" height="100vh">
 
-            <Box width="100%" height="60px" position="fixed" top="0" left="0" bgcolor="lightblue" zIndex={1000}>
+            <Box width="100%" height="75px" position="fixed" top="0" left="0" bgcolor="#004687" zIndex={1000}>
                 <Navbar />
             </Box>
 
-            <Box display="flex"  width="100%" marginTop="60px">
+            <Box display="flex"  width="100%" marginTop="75px">
                 
-                <Box position="fixed" height="calc(100vh - 60px)" width="150px" bgcolor="lightblue" top="60px" left="0">
+                <Box position="fixed" height="calc(100vh - 75px)" width="150px"  top="75px" left="0" bgcolor="#004687" color="white">
                     <Sidebar />
                 </Box>
 
-                <Box marginLeft="150px" left="150px" width="calc(100% - 150px)" height="calc(100vh - 60px)" overflow="auto" padding="30px" bgcolor="black" color="white">
+                <Box marginLeft="150px" left="150px" width="calc(100% - 150px)" height="calc(100vh - 75px)" overflow="auto" padding="30px" bgcolor="white" color="black">
                     <Outlet />
                 </Box>
 
