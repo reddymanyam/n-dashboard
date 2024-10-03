@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, styled, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import Searchbar from '../Pages/Searchbar/Searchbar';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
@@ -17,12 +17,13 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import Avatar from '@mui/material/Avatar';
 
-
 const CustomButton = styled(Button)({
-   minWidth:"40px", width:"40px", height:"40px", color:"white", marginLeft:"15px"
+   minWidth:"40px", width:"40px", height:"40px", color:"white", marginLeft:"10px", 
 })
 
 const Navbar = () => {
+
+  const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -31,7 +32,9 @@ const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  const handleNavigate = () =>{
+        navigate("/?tab=login")
+  }
   return (
     <>
       <Box 
@@ -65,9 +68,6 @@ const Navbar = () => {
           <EmailOutlinedIcon />
           </CustomButton> 
           <CustomButton >
-          <NotificationsNoneOutlinedIcon />
-          </CustomButton>
-          <CustomButton >
           <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
         <Tooltip title="Account settings">
           <IconButton
@@ -78,7 +78,7 @@ const Navbar = () => {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-             <AccountCircleOutlinedIcon />
+             <NotificationsNoneOutlinedIcon sx={{color:"white"}} />
           </IconButton>
         </Tooltip>
       </Box>
@@ -90,14 +90,14 @@ const Navbar = () => {
         onClick={handleClose}
         slotProps={{
           paper: {
-            elevation: 0,
+            elevation: 2,
             sx: {
               overflow: 'visible',
               filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
               mt: 1.5,
               '& .MuiAvatar-root': {
-                width: 32,
-                height: 32,
+                width: 30,
+                height: 30,
                 ml: -0.5,
                 mr: 1,
               },
@@ -119,7 +119,7 @@ const Navbar = () => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem onClick={handleClose}>
+        <MenuItem component={Link} to="/user">
           <Avatar /> Profile
         </MenuItem>
         <MenuItem onClick={handleClose}>
@@ -137,7 +137,7 @@ const Navbar = () => {
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={handleNavigate}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
@@ -146,7 +146,86 @@ const Navbar = () => {
       </Menu>
          
           </CustomButton>
-           <Typography variant='h6' component="h2"  color="white" sx={{paddingBottom:"4px"}}>Reddy Roy</Typography>
+          <CustomButton >
+          <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+        <Tooltip title="Account settings">
+          <IconButton
+            onClick={handleClick}
+            size="small"
+            sx={{ ml: 2 }}
+            aria-controls={open ? 'account-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+          >
+             <AccountCircleOutlinedIcon sx={{color:"white"}} />
+          </IconButton>
+        </Tooltip>
+      </Box>
+      <Menu
+        anchorEl={anchorEl}
+        id="account-menu"
+        open={open}
+        onClose={handleClose}
+        onClick={handleClose}
+        slotProps={{
+          paper: {
+            elevation: 2,
+            sx: {
+              overflow: 'visible',
+              filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+              mt: 1.5,
+              '& .MuiAvatar-root': {
+                width: 30,
+                height: 30,
+                ml: -0.5,
+                mr: 1,
+              },
+              '&::before': {
+                content: '""',
+                display: 'block',
+                position: 'absolute',
+                top: 0,
+                right: 14,
+                width: 10,
+                height: 10,
+                bgcolor: 'background.paper',
+                transform: 'translateY(-50%) rotate(45deg)',
+                zIndex: 0,
+              },
+            },
+          },
+        }}
+        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+      >
+        <MenuItem component={Link} to="/user">
+          <Avatar /> Profile
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Avatar /> My account
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <PersonAdd fontSize="small" />
+          </ListItemIcon>
+          Add another account
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <Settings fontSize="small" />
+          </ListItemIcon>
+          Settings
+        </MenuItem>
+        <MenuItem onClick={handleNavigate}>
+          <ListItemIcon>
+            <Logout fontSize="small" />
+          </ListItemIcon>
+          Logout
+        </MenuItem>
+      </Menu>
+         
+          </CustomButton>
+           <Typography variant='h6' component="h2"  color="white" sx={{padding :"4px", fontfamily:  "Times New Roman"}}>Reddy Roy</Typography>
         </Box>
       </Box>
     </>

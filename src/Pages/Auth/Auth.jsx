@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Card, Paper } from '@mui/material';
 import Button from '@mui/material/Button';
-
+import { useLocation } from 'react-router-dom'; 
 
 
 function CustomTabPanel(props) {
@@ -44,6 +44,18 @@ const Auth= () => {
     const [email, setEmail] = React.useState("")
     const [password, setPassword] = React.useState("");
     const [confirmPassword, SetConfirmPassword] = React.useState("");
+    const location = useLocation();
+     
+    React.useEffect(() => {
+        
+        const searchParams = new URLSearchParams(location.search);
+        const tab = searchParams.get('tab');
+        if (tab === 'login') {
+            setValue(1); 
+        } else {
+            setValue(0); 
+        }
+    }, [location]);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
