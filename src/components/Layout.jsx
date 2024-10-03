@@ -18,7 +18,7 @@ const Layout = () => {
                     <Sidebar />
                 </Box>
 
-                <Box marginLeft="150px" left="150px" width="calc(100% - 150px)" height="calc(100vh - 75px)" overflow="auto" padding="30px" bgcolor="white" color="black">
+                <Box marginLeft="150px" left="150px" width="calc(100% - 150px)" height="calc(100vh - 75px)" overflow="auto" bgcolor="white" color="black">
                     <Outlet />
                 </Box>
 

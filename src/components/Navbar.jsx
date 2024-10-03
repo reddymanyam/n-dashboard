@@ -18,7 +18,7 @@ import Logout from '@mui/icons-material/Logout';
 import Avatar from '@mui/material/Avatar';
 
 const CustomButton = styled(Button)({
-   minWidth:"40px", width:"40px", height:"40px", color:"white", marginLeft:"10px", 
+   minWidth:"40px", width:"40px", height:"40px", color:"white", marginRight:"10px", padding:'15px',
 })
 
 const Navbar = () => {
@@ -225,7 +225,7 @@ const Navbar = () => {
       </Menu>
          
           </CustomButton>
-           <Typography variant='h6' component="h2"  color="white" sx={{padding :"4px", fontfamily:  "Times New Roman"}}>Reddy Roy</Typography>
+           {/* <Typography variant='h6' component="h2"  color="white" sx={{padding :"4px", fontfamily:  "Times New Roman"}}>Reddy Roy</Typography> */}
         </Box>
       </Box>
     </>
