@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import home4 from '../../assets/home4.jpg';
 import home5 from '../../assets/home5.jpg';
 import home1 from '../../assets/home1.jpg';
@@ -22,57 +22,22 @@ const Item = styled(Paper)(({ theme }) => ({
   }),
 }));
 
+const Image = styled('img')  ({
+  width:"35%", height:'100%', display:"flex", justifyContent:"flex-start", borderRadius:"10px"
+})
 export default function Dashboard() {
+  const Img = [home1,home2, home3,home4,home5,home6] ;
   return (
    
-
     <Box sx={{ flexGrow: 1 , width:"100%"}}>
-     
-      <Grid container spacing={2} padding="33px" >
-      
-
-        <Grid item xs={6} md={12} >
-        <Paper elevation={6}>
-          <Item >
-            <img src={home4} style={{width:"38%", height:'100%', display:"flex", justifyContent:"flex-start"}} />
+     {Img.map((imagee,i) =>(
+      <Grid container spacing={2} key={i}>
+        <Grid size={{ xs: 12, md: 12 }} padding="10px">
+          <Item elevation={6} >
+            <Image  src={imagee}  />
           </Item>
-          </Paper>
         </Grid>
-       
-        <Grid item xs={6} md={12}>
-        <Paper elevation={6}>
-          <Item> <img src={home5} style={{width:"38%", height:'100%',display:"flex", justifyContent:"flex-end"}} /></Item>
-          </Paper>
-        </Grid>
-       
-        <Grid item xs={6} md={12}>
-        <Paper elevation={6}>
-          <Item> <img src={home1} style={{width:"38%", height:'100%',display:"flex", justifyContent:"flex-end"}} /></Item>
-          </Paper>
-        </Grid>
-        <Grid item xs={6} md={12}>
-        <Paper elevation={6}>
-          <Item> <img src={home2} style={{width:"38%", height:'100%',display:"flex", justifyContent:"flex-end"}} /></Item>
-          </Paper>
-        </Grid>
-        <Grid item xs={6} md={12}>
-        <Paper elevation={6}>
-          <Item> <img src={home3} style={{width:"38%", height:'100%',display:"flex", justifyContent:"flex-end"}} /></Item>
-          </Paper>
-        </Grid>
-        <Grid item xs={6} md={12}>
-        <Paper elevation={6}>
-          <Item> <img src={home6} style={{width:"38%", height:'100%',display:"flex", justifyContent:"flex-end"}} /></Item>
-          </Paper>
-        </Grid>
-        <Grid item xs={6} md={12}>
-        <Paper elevation={6}>
-          <Item> <img src={home5} style={{width:"38%", height:'100%',display:"flex", justifyContent:"flex-end"}} /></Item>
-          </Paper>
-        </Grid>
-       
-      </Grid>
-      
+      </Grid>))}
     </Box>
   );
 }

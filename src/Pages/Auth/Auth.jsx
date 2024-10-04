@@ -4,9 +4,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { Card, Paper } from '@mui/material';
 import Button from '@mui/material/Button';
 import { useLocation } from 'react-router-dom'; 
+import coverImage from '../../assets/auth6.jpg';
 
 
 function CustomTabPanel(props) {
@@ -74,16 +74,13 @@ const Auth= () => {
         <Box
             sx={{
                 display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
                 height: '100vh',
                 width: '100%',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
             }}
-        >
-            <Paper elevation={6} sx={{ borderRadius: 2, width: '400px' }}>
-                <Card sx={{ padding: 4, width: '100%' }}>
+        > 
+            <img src={coverImage} style={{width:"64%"}} />
+            <Box  sx={{  display:'flex', justifyContent:"flex-end", width:"36%", alignItems:"center", height:"100vh"}}>
+                <Box sx={{ padding: 10, width: '100%' }}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" variant="fullWidth" >
                             <Tab label="SignUp" {...a11yProps(0)} />
@@ -95,7 +92,7 @@ const Auth= () => {
                         <TextField
                             id="name-input"
                             label="Enter your Name"
-                            variant="filled"
+                            // variant="filled"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             fullWidth
@@ -105,7 +102,7 @@ const Auth= () => {
                         <TextField
                             id="email-input-login"
                             label="Enter your Email"
-                            variant="filled"
+                            // variant="filled"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             fullWidth
@@ -115,7 +112,7 @@ const Auth= () => {
                         <TextField
                             id="password-input-login"
                             label="Enter your Password"
-                            variant="filled"
+                            // variant="filled"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             fullWidth
@@ -126,7 +123,7 @@ const Auth= () => {
                         <TextField
                             id="confirm-password-input"
                             label="Confirm your Password"
-                            variant="filled"
+                            // variant="filled"
                             value={confirmPassword}
                             onChange={(e) => SetConfirmPassword(e.target.value)}
                             fullWidth
@@ -145,7 +142,7 @@ const Auth= () => {
                         <TextField
                             id="email-input-signup"
                             label="Enter your Email"
-                            variant="filled"
+                            // variant="filled"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             fullWidth
@@ -155,7 +152,7 @@ const Auth= () => {
                         <TextField
                             id="password-input-signup"
                             label="Enter your Password"
-                            variant="filled"
+                            // variant="filled"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             fullWidth
@@ -168,8 +165,8 @@ const Auth= () => {
                             </Button>
                         </Box>
                     </CustomTabPanel>
-                </Card>
-            </Paper>
+                </Box>
+            </Box>
         </Box>
     );
 }
