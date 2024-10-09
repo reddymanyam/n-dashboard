@@ -1,0 +1,210 @@
+[
+    {
+        "property_id": 1,
+        "address": "2450 Meadow Vale Circle",
+        "city": "Limushan",
+        "price": 773866.53,
+        "bedrooms": 4,
+        "bathrooms": 1,
+        "square_feet": 3681,
+        "year_built": 1940
+    },
+    {
+        "property_id": 2,
+        "address": "152 Jay Point",
+        "city": "Amaraji",
+        "zipcode": "55515-000",
+        "price": 429061.89,
+        "bedrooms": 8,
+        "bathrooms": 2,
+        "square_feet": 833,
+        "year_built": 1910
+    },
+    {
+        "property_id": 3,
+        "address": "4 Lukken Road",
+        "city": "Gechuan",
+        "price": 360694.33,
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "square_feet": 2240,
+        "year_built": 1964
+    },
+    {
+        "property_id": 4,
+        "address": "012 Prairie Rose Center",
+        "city": "Tha Bo",
+        "zipcode": "43110",
+        "price": 324214.66,
+        "bedrooms": 3,
+        "bathrooms": 5,
+        "square_feet": 2168,
+        "year_built": 1988
+    },
+    {
+        "property_id": 5,
+        "address": "16 Melby Way",
+        "city": "Waitakere",
+        "zipcode": "0782",
+        "price": 123643.4,
+        "bedrooms": 1,
+        "bathrooms": 4,
+        "square_feet": 2672,
+        "year_built": 2001
+    },
+    {
+        "property_id": 6,
+        "address": "10 Buena Vista Circle",
+        "city": "Xinning",
+        "price": 355243.81,
+        "bedrooms": 9,
+        "bathrooms": 5,
+        "square_feet": 636,
+        "year_built": 1916
+    },
+    {
+        "property_id": 7,
+        "address": "11995 Haas Crossing",
+        "city": "Bail",
+        "zipcode": "5420",
+        "price": 229700.52,
+        "bedrooms": 10,
+        "bathrooms": 2,
+        "square_feet": 1499,
+        "year_built": 1967
+    },
+    {
+        "property_id": 8,
+        "address": "498 Pleasure Avenue",
+        "city": "Bang Nam Priao",
+        "zipcode": "44130",
+        "price": 936002.88,
+        "bedrooms": 5,
+        "bathrooms": 2,
+        "square_feet": 1064,
+        "year_built": 2018
+    },
+    {
+        "property_id": 9,
+        "address": "969 Service Place",
+        "city": "Lage",
+        "state": "16",
+        "zipcode": "4960-160",
+        "price": 114521.3,
+        "bedrooms": 6,
+        "bathrooms": 5,
+        "square_feet": 4956,
+        "year_built": 1971
+    },
+    {
+        "property_id": 10,
+        "address": "00 Lerdahl Pass",
+        "city": "Wangqu",
+        "price": 444704.81,
+        "bedrooms": 9,
+        "bathrooms": 4,
+        "square_feet": 1107,
+        "year_built": 1920
+    },
+    {
+        "property_id": 11,
+        "address": "72584 Erie Place",
+        "city": "Shijing",
+        "price": 169591.16,
+        "bedrooms": 9,
+        "bathrooms": 3,
+        "square_feet": 3276,
+        "year_built": 1929
+    },
+    {
+        "property_id": 12,
+        "address": "46086 Express Way",
+        "city": "Pingtang",
+        "price": 194906.52,
+        "bedrooms": 7,
+        "bathrooms": 1,
+        "square_feet": 3812,
+        "year_built": 1990
+    },
+    {
+        "property_id": 13,
+        "address": "6796 5th Terrace",
+        "city": "Mandala",
+        "price": 999827.09,
+        "bedrooms": 9,
+        "bathrooms": 1,
+        "square_feet": 1700,
+        "year_built": 1997
+    },
+    {
+        "property_id": 14,
+        "address": "7756 Maywood Road",
+        "city": "Prachin Buri",
+        "zipcode": "31110",
+        "price": 723365.82,
+        "bedrooms": 10,
+        "bathrooms": 5,
+        "square_feet": 855,
+        "year_built": 1974
+    },
+    {
+        "property_id": 15,
+        "address": "38089 Veith Avenue",
+        "city": "Santai",
+        "price": 677946.66,
+        "bedrooms": 5,
+        "bathrooms": 4,
+        "square_feet": 2821,
+        "year_built": 1922
+    },
+    {
+        "property_id": 16,
+        "address": "07 Sheridan Drive",
+        "city": "Glagahdowo",
+        "price": 498696.16,
+        "bedrooms": 1,
+        "bathrooms": 4,
+        "square_feet": 3457,
+        "year_built": 1996
+    },
+    {
+        "property_id": 17,
+        "address": "9135 Evergreen Trail",
+        "city": "Bandar-e Lengeh",
+        "price": 569843.13,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "square_feet": 2243,
+        "year_built": 1968
+    },
+    {
+        "property_id": 18,
+        "address": "0 New Castle Place",
+        "city": "Kumane",
+        "price": 701860.12,
+        "bedrooms": 9,
+        "bathrooms": 5,
+        "square_feet": 2182,
+        "year_built": 1949
+    },
+    {
+        "property_id": 19,
+        "address": "96781 Oak Hill",
+        "city": "Zijin",
+        "price": 856196.23,
+        "bedrooms": 7,
+        "bathrooms": 1,
+        "square_feet": 2867,
+        "year_built": 1977
+    },
+    {
+        "property_id": 20,
+        "address": "533 Carioca Park",
+        "city": "Nevesinje",
+        "price": 389301.73,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "square_feet": 1368,
+        "year_built": 1944
+    }
+]
