@@ -9,6 +9,7 @@ import home1 from '../../assets/home1.jpg';
 import home2 from '../../assets/home2.jpg';
 import home3 from '../../assets/home3.jpg';
 import home6 from '../../assets/home6.jpg';
+import axios from 'axios' ;
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: '#ffff',
@@ -37,20 +38,32 @@ const Image1 = styled('img')({
 })
 
 export default function Dashboard() {
+  const [data,setData] = React.useState([]);
+
+  React.useEffect(()=>{
+     axios.get("http://localhost:4000/")
+      .then(response => {
+        console.log("response.data =",response);
+        setData(response.data)
+       
+      })
+      .catch(err=>{ console.error(`https://www.The error you are facing is ${err}`)})
+  },[])
+  // console.log("data = ", data);
+  
+
   return (
     <Box sx={{display:"flex", flexGrow: 1 , width:"100%"}}>
       <Box sx={{width:"70%"}}>
       <Grid  padding="15px" >
-      
         <Grid item xs={6} md={8} >
         <Paper elevation={6}>
           <Item >
             <Image src={home4}  />
+            {d.name}
           </Item>
           </Paper>
         </Grid>
-        
-       
         <Grid item xs={6} md={8}>
         <Paper elevation={6}>
           <Item> <Image src={home5}  /></Item>
